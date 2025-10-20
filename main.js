@@ -12,7 +12,7 @@ function createWindow() {
     },
   });
   
-  win.setMenuBarVisibility(false); // Cache la barre de menu (optionnel)
+  win.setMenuBarVisibility(false); // Cache la barre de menu 
   win.loadFile('index.html');
 }
 
