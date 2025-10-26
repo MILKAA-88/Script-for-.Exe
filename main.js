@@ -7,9 +7,9 @@ function createWindow() {
     height: 600,
     icon: path.join(__dirname, 'icon.ico'),
     webPreferences: {
-      nodeIntegration: false, // Attention ! Ne changez pas, si vous mettez "true", vous vous exposez à des failles de sécurité (voir README)
-      contextIsolation: true, // Même chose
-      preload: path.join(__dirname, 'preload.js'), // Fichier pour exposer des API de manière sécurisée
+      nodeIntegration: false, // Warning! Do not change, if you put "true", you expose yourself to security flaws (see README)
+      contextIsolation: true, // Same thing
+      preload: path.join(__dirname, 'preload.js'), // File to expose APIs in a secure way
     },
   });
 
