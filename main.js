@@ -13,7 +13,7 @@ function createWindow() {
     },
   });
 
-  win.setMenuBarVisibility(false); // Cache la barre de menu
+  win.setMenuBarVisibility(false); // Hide the menu bar
   win.loadFile('index.html');
 }
 
@@ -21,12 +21,12 @@ app.whenReady().then(() => {
   createWindow();
 
   app.on('activate', () => {
-    // Recrée une fenêtre si aucune n’est ouverte (macOS)
+    // Recreate a window if none is open (macOS)
     if (BrowserWindow.getAllWindows().length === 0) createWindow();
   });
 });
 
 app.on('window-all-closed', () => {
-  // Quitte l'app quand toutes les fenêtres sont fermées (sauf macOS)
+  // Exit the app when all windows are closed (except macOS)
   if (process.platform !== 'darwin') app.quit();
 });
